@@ -1,0 +1,68 @@
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.animal-selector {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.cbox {
+
+}
+
+.clabel {
+    margin-bottom: 20px;
+    padding-left: 29px;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+#checkbox1, #checkbox2, #checkbox3, #checkbox4, #checkbox5, #checkbox6 {
+    display: none;
+}
+
+#checkbox1 + span, #checkbox2 + span, #checkbox3 + span, #checkbox4 + span, #checkbox5 + span, #checkbox6 + span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #999999;
+    border-radius: 3px;
+
+}
+
+#checkbox1:checked + span, #checkbox2:checked + span, #checkbox3:checked + span, #checkbox4:checked + span, #checkbox5:checked + span, #checkbox6:checked + span {
+    border: 1px solid #CCB26E;    
+}
+
+#checkbox1 + span::before, #checkbox2 + span::before, #checkbox3 + span::before,#checkbox4 + span::before, #checkbox5 + span::before, #checkbox6 + span::before {
+    content: url('../img/Rectangle99.svg');
+    /* content: '\2713'; */
+    position: absolute;
+    top: -3px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    text-align: center;
+    
+}
+
+#checkbox1:checked + span::before, #checkbox2:checked + span::before, #checkbox3:checked + span::before, #checkbox4:checked + span::before, #checkbox5:checked + span::before, #checkbox6:checked + span::before {
+    opacity: 1;
+}
